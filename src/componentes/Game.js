@@ -23,9 +23,6 @@ const Game = () => {
         setXisNext(!xIsNext);
     }
 
-    const jumpTo = () => {
-
-    }
 
     const renderMoves = () => (
         <button onClick={() => setBoard(Array(9).fill(null))}>
@@ -37,7 +34,7 @@ const Game = () => {
         <>
             <Board squares={board} onClick={handleClick} />
             <div style={styles}>
-                <p>{winner ? 'winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+                <p>{winner ? 'winner: ' + winner : 'Tu turno: ' + (xIsNext ? 'X' : 'O')}</p>
                 {renderMoves()}
 
             </div>
