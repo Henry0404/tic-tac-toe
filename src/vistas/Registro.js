@@ -2,7 +2,7 @@ import React from 'react';
 import './Registro.css';
 
 
-function Registro(props) {
+function Registro({ iniciarJuego }) {
     return <div>
         <h4>Pick A Weapon</h4>
 
@@ -13,8 +13,8 @@ function Registro(props) {
                 <input type="text" placeholder="participante 2" />
             </div>
             <div className="botones">
-                <button onClick={() => props.iniciarJuego(true)} className="x">x</button>
-                <button onClick={() => props.iniciarJuego(false)} className="o">o</button>
+                <button onClick={() => iniciarJuego(true)} className="x">x</button>
+                <button onClick={() => iniciarJuego(false)} className="o">o</button>
             </div>
 
         </div>

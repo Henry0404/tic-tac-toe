@@ -7,9 +7,9 @@ const styles = {
     margin: "20px auto",
 }
 
-const Juego = (props) => {
+const Juego = ({ iniciaX }) => {
     const [board, setBoard] = useState(Array(9).fill(null));
-    const [xIsNext, setXisNext] = useState(props.iniciaX);
+    const [xIsNext, setXisNext] = useState(iniciaX);
     const winner = calculateWinner(board);
 
 
