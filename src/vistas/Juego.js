@@ -25,7 +25,7 @@ const Juego = ({ iniciaX }) => {
 
 
     const renderMoves = () => (
-        <button onClick={() => setBoard(Array(9).fill(null))}>
+        <button style={{ color: 'black' }} onClick={() => setBoard(Array(9).fill(null))}>
             Inicio de Juego
         </button>
     )
