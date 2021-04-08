@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { calculateWinner } from './helpers';
-import Board from './Board';
+import { calculateWinner } from '../componentes/helpers';
+import Board from '../componentes/Board';
 
 const styles = {
     width: "200px",
     margin: "20px auto",
 }
 
-const Game = () => {
+const Juego = (props) => {
     const [board, setBoard] = useState(Array(9).fill(null));
-    const [xIsNext, setXisNext] = useState(true);
+    const [xIsNext, setXisNext] = useState(props.iniciaX);
     const winner = calculateWinner(board);
 
 
@@ -42,4 +42,4 @@ const Game = () => {
     )
 }
 
-export default Game;
+export default Juego;
